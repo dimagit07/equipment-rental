@@ -1,0 +1,44 @@
+admin@gmail.com
+12345678
+
+For use project you need to create database and do the export of equipment_rental.sql
+This file locates in root of my project.
+
+Name of database equipment_rental
+
+CREATE TABLE users (
+	id INT(10) PRIMARY KEY AUTO_INCREMENT,
+	email VARCHAR(500) UNIQUE NOT NULL,
+	phone_number VARCHAR(15) NULL,
+	user_password VARCHAR(255) NOT NULL,
+	is_admin BOOLEAN NOT NULL
+);
+
+
+CREATE TABLE equipments(
+    id INT(10) PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    price DECIMAL(12, 2) NOT NULL,
+    is_active BOOLEAN DEFAULT 1
+);
+
+
+CREATE TABLE photos(
+	id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	equipment_id int(10) NOT NULL,
+	image VARCHAR(500) NOT NULL
+);
+
+
+CREATE TABLE orders(
+	id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	equipment_id INT(10) NOT NULL,
+        user_id INT(10) NOT NULL,
+        count INT(10) NOT NULL DEFAULT 0,
+	price DECIMAL(12, 2) NOT NULL DEFAULT 0.00,
+	comment TEXT NULL,
+	status TINYINT UNSIGNED NOT NULL DEFAULT 1
+);
+
+------------------------------------------------------------

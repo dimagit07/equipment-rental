@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body {
+	min-width: 1200px;
+	overflow: auto;
+	min-height: 100vh;
+	font-family: "Sora-Regular";
+}
+html {
+	font-size: 10px;
+	line-height: 1;
+}
+p,
+div,
+span {
+	color: var(--color-dark-blue);
+}
+a {
+	text-decoration: none;
+	color: var(--color-dark-blue);
+}
+a:hover {
+	color: var(--color-soft-pink);
+}
+input,
+textarea {
+	color: var(--color-dark-blue);
+}
+button {
+	color: #fff;
+	cursor: pointer;
+}
+.page-wrapper {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 50px;
+}
+.page-content {
+	flex-grow: 1;
+}
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+.display-none {
+	display: none;
+}
